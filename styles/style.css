@@ -1,0 +1,70 @@
+body {
+  background: #202028;
+  color: #fff;
+  font-family: sans-serif;
+  font-size: 2em;
+  text-align: center;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+canvas {
+  display: block;
+  background-image: url(../assets/images/bg.jpeg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+#main,
+#selectNftScreen {
+  display: none;
+}
+#newGame,
+#creditBtn,
+#backBtn,
+#mintNftBtn,
+button {
+  text-align: center;
+  vertical-align: middle;
+  border: 2px solid goldenrod;
+  border-radius: 7px;
+  background-color: gold;
+  color: orangeRed;
+  font-size: 32px;
+  font-weight: bold;
+  font-family: "Courier New";
+  width: 5em;
+  margin: 5px auto;
+}
+.btnSound {
+  position: absolute;
+  bottom: 0px;
+  right: 10px;
+}
+#theHead {
+  margin: auto;
+  color: orange;
+  font-size: 2em;
+  font-family: "Courier New";
+}
+#credits {
+  margin: auto;
+  color: orange;
+  font-size: 1em;
+  font-family: "Courier New";
+  display: none;
+  background-color: inherit;
+}
+#Nfts {
+  margin: auto;
+  color: orange;
+  font-size: 1em;
+  font-family: "Courier New";
+  display: none;
+  background-color: inherit;
+}
+#backBtn {
+  display: none;
+}

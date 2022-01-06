@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Moralis SDK code -->
+    <script src="https://cdn.jsdelivr.net/npm/web3@latest/dist/web3.min.js"></script>
+    <script src="https://unpkg.com/moralis/dist/moralis.js"></script>
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="shortcut icon"
+      type="image/jpg"
+      href="./assets/images/mainCh.png"
+    />
+    <title>NFT Runners</title>
+
+    <!-- link css -->
+    <link rel="stylesheet" href="styles/style.css" />
+  </head>
+  <body>
+    <div id="menuScreenMain">
+      <div id="theHead">NFT Runners!</div>
+      <div
+        id="newGame"
+        onclick="runGame()"
+        onmouseover="this.style.backgroundColor = 'goldenrod'"
+        onmouseout="this.style.backgroundColor = 'gold'"
+      >
+        New Game
+      </div>
+
+      <div
+        id="creditBtn"
+        onmouseover="this.style.backgroundColor = 'goldenrod'"
+        onmouseout="this.style.backgroundColor = 'gold'"
+        onclick="showCredits()"
+      >
+        Credits
+      </div>
+      <div>
+        <button
+          onmouseover="this.style.backgroundColor = 'goldenrod'"
+          onmouseout="this.style.backgroundColor = 'gold'"
+          onclick="selectNftScreenCall()"
+          id="selectNftBtn"
+        >
+          Select NFt
+        </button>
+      </div>
+      <div
+        id="mintNftBtn"
+        onmouseover="this.style.backgroundColor = 'goldenrod'"
+        onmouseout="this.style.backgroundColor = 'gold'"
+        onclick="showNft()"
+      >
+        Mint Nft
+      </div>
+      <div>
+        <button
+          onmouseover="this.style.backgroundColor = 'goldenrod'"
+          onmouseout="this.style.backgroundColor = 'gold'"
+          onclick="login()"
+          id="btn-login"
+        >
+          Connect Wallet
+        </button>
+      </div>
+      <div>
+        <button
+          onmouseover="this.style.backgroundColor = 'goldenrod'"
+          onmouseout="this.style.backgroundColor = 'gold'"
+          onclick="logOut()"
+          id="btn-logout"
+        >
+          Logout
+        </button>
+      </div>
+
+      <div>
+        <button
+          onmouseover="this.style.backgroundColor = 'goldenrod'"
+          onmouseout="this.style.backgroundColor = 'gold'"
+          onclick="menuMusicControl()"
+          class="btnSound"
+          style="width: 200px"
+        >
+          Sound <span id="isPlaying">Off</span>
+        </button>
+      </div>
+
+      <!-- Mint Nft screen -->
+      <div id="Nfts">Mint Nfts</div>
+      <!-- <h1>Nft stats</h1>
+      <ul id="nft-stats"></ul> -->
+
+      <!-- selectNftScreen -->
+      <div id="selectNftScreen">
+        <ul id="ShowNfts"></ul>
+      </div>
+
+      <!-- Credits screen -->
+      <div id="credits">NFT Runners by Rayan</div>
+      <div
+        id="backBtn"
+        onmouseover="this.style.backgroundColor = 'goldenrod'"
+        onmouseout="this.style.backgroundColor = 'gold'"
+        onclick="goBack()"
+      >
+        Back
+      </div>
+    </div>
+
+    <!-- main game screen -->
+    <div id="main">
+      <div id="score"></div>
+      <div id="coinsCollected"></div>
+      <canvas id="game" width="640" height="400"></canvas>
+      <img id="mainCh" class="mainCh" style="display: none" src="" />
+      <img
+        id="enemy1"
+        class="enemy1"
+        style="display: none"
+        src="./assets/images/enemy1.png"
+      />
+      <img
+        id="coin"
+        class="coin"
+        style="display: none"
+        src="./assets/images/coin.png"
+      />
+    </div>
+
+    <script src="./scripts/menu.js"></script>
+    <script src="./scripts/web3.js"></script>
+
+    <!-- Game logics -->
+    <!-- Classes -->
+    <script src="./scripts/GameLogic/Class/Obstacles.js"></script>
+    <script src="./scripts/GameLogic/Class/Player.js"></script>
+    <script src="./scripts/GameLogic/Class/Text.js"></script>
+    <script src="./scripts/GameLogic/Class/Collectibles.js"></script>
+
+    <!-- functions -->
+    <script src="./scripts/GameLogic/functions/Obstacles.js"></script>
+    <script src="./scripts/GameLogic/functions/gameLogic.js"></script>
+    <script src="./scripts/GameLogic/functions/sound.js"></script>
+    <script src="./scripts/GameLogic/functions/Collectibles.js"></script>
+
+    <!-- variables -->
+    <script src="./scripts/GameLogic/variables/variables.js"></script>
+  </body>
+</html>
